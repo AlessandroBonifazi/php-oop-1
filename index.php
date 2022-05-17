@@ -9,8 +9,10 @@
 <body>
     <h1>Movie</h1>
     <?php
-    include_once __DIR__ "/movie.php";
-    
+    include_once "entities/movie.php";
+    foreach ($movies as $movie) {
+        echo "<div>" . $movie->title ." ". $movie->director ." ". $movie->genre ." ". $movie->year ." ". "</div>";
+    }
     ?>
 </body>
 </html>
